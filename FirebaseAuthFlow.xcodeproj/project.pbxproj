@@ -3,16 +3,50 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E91B27094A9D00AB0FAC2D8 /* Pods_FirebaseAuthFlow_FirebaseAuthFlowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA21E11A0B726FD6FBCD72D3 /* Pods_FirebaseAuthFlow_FirebaseAuthFlowUITests.framework */; };
+		3C7608CE6E7EADE51DBFBFF4 /* Pods_FirebaseAuthFlowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEA6A5DF88A9463BCBC31C9 /* Pods_FirebaseAuthFlowTests.framework */; };
 		48C1AD732603CEFB003F48F1 /* FirebaseAuthFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AD722603CEFB003F48F1 /* FirebaseAuthFlowApp.swift */; };
-		48C1AD752603CEFB003F48F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AD742603CEFB003F48F1 /* ContentView.swift */; };
 		48C1AD772603CEFC003F48F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AD762603CEFC003F48F1 /* Assets.xcassets */; };
 		48C1AD7A2603CEFC003F48F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AD792603CEFC003F48F1 /* Preview Assets.xcassets */; };
 		48C1AD852603CEFC003F48F1 /* FirebaseAuthFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AD842603CEFC003F48F1 /* FirebaseAuthFlowTests.swift */; };
 		48C1AD902603CEFC003F48F1 /* FirebaseAuthFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AD8F2603CEFC003F48F1 /* FirebaseAuthFlowUITests.swift */; };
+		48C1ADC32603D033003F48F1 /* OnboardingStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADC22603D033003F48F1 /* OnboardingStart.swift */; };
+		48C1ADC82603D0E0003F48F1 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADC72603D0E0003F48F1 /* ViewRouter.swift */; };
+		48C1ADCE2603D119003F48F1 /* FirebaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADCD2603D119003F48F1 /* FirebaseNetworking.swift */; };
+		48C1ADD32603D15D003F48F1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADD22603D15D003F48F1 /* Constants.swift */; };
+		48C1ADD82603D18D003F48F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADD72603D18D003F48F1 /* User.swift */; };
+		48C1ADDD2603D41E003F48F1 /* DefaultsObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADDC2603D41E003F48F1 /* DefaultsObservation.swift */; };
+		48C1ADE22603D4C5003F48F1 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADE12603D4C5003F48F1 /* Errors.swift */; };
+		48C1ADE82603D53C003F48F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADE72603D53C003F48F1 /* AppDelegate.swift */; };
+		48C1ADF02603D638003F48F1 /* OnboardingPhoneEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADEF2603D638003F48F1 /* OnboardingPhoneEntry.swift */; };
+		48C1ADF52603D682003F48F1 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADF42603D682003F48F1 /* BigButton.swift */; };
+		48C1ADFB2603D6F2003F48F1 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADFA2603D6F2003F48F1 /* FontExtension.swift */; };
+		48C1AE002603D70B003F48F1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1ADFF2603D70B003F48F1 /* ColorExtension.swift */; };
+		48C1AE212603D833003F48F1 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE182603D829003F48F1 /* Rubik-Black.ttf */; };
+		48C1AE252603D83A003F48F1 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE1D2603D82A003F48F1 /* Rubik-BlackItalic.ttf */; };
+		48C1AE292603D83D003F48F1 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE1E2603D82A003F48F1 /* Rubik-Bold.ttf */; };
+		48C1AE2D2603D840003F48F1 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE1B2603D82A003F48F1 /* Rubik-BoldItalic.ttf */; };
+		48C1AE312603D844003F48F1 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE1A2603D82A003F48F1 /* Rubik-Italic.ttf */; };
+		48C1AE322603D844003F48F1 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE192603D82A003F48F1 /* Rubik-LightItalic.ttf */; };
+		48C1AE332603D844003F48F1 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE1C2603D82A003F48F1 /* Rubik-Light.ttf */; };
+		48C1AE342603D844003F48F1 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE1F2603D82A003F48F1 /* Rubik-Medium.ttf */; };
+		48C1AE352603D844003F48F1 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE172603D829003F48F1 /* Rubik-Regular.ttf */; };
+		48C1AE362603D844003F48F1 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE202603D82A003F48F1 /* Rubik-MediumItalic.ttf */; };
+		48C1AE3B2603D890003F48F1 /* OnboardingEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AE3A2603D890003F48F1 /* OnboardingEntryViewModel.swift */; };
+		48C1AE402603D922003F48F1 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AE3F2603D922003F48F1 /* CustomBackButton.swift */; };
+		48C1AE452603D95F003F48F1 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AE442603D95F003F48F1 /* ImageExtension.swift */; };
+		48C1AE4A2603DA38003F48F1 /* PhoneNumEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AE492603DA38003F48F1 /* PhoneNumEntryView.swift */; };
+		48C1AE4F2603DAD6003F48F1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AE4E2603DAD6003F48F1 /* StringExtension.swift */; };
+		48C1AE542603DBA0003F48F1 /* OnboardingCodeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AE532603DBA0003F48F1 /* OnboardingCodeEntry.swift */; };
+		48C1AE592603DBE7003F48F1 /* ProgressStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AE582603DBE7003F48F1 /* ProgressStepper.swift */; };
+		48C1AE5E2603DC97003F48F1 /* CodeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AE5D2603DC97003F48F1 /* CodeEntry.swift */; };
+		48C1AE632603DD1B003F48F1 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AE622603DD1B003F48F1 /* MainPage.swift */; };
+		48C1AE682603DDF7003F48F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE672603DDF7003F48F1 /* GoogleService-Info.plist */; };
+		798F1CB3FE98BEE5A2FA809F /* Pods_FirebaseAuthFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35A4A8CCD66ECDEF96BF628 /* Pods_FirebaseAuthFlow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		074FF3363C51213C4E0DF91A /* Pods-FirebaseAuthFlowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthFlowTests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthFlowTests/Pods-FirebaseAuthFlowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0C9E2D1191B1F08F30EBF6D3 /* Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		48C1AD6F2603CEFB003F48F1 /* FirebaseAuthFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C1AD722603CEFB003F48F1 /* FirebaseAuthFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthFlowApp.swift; sourceTree = "<group>"; };
-		48C1AD742603CEFB003F48F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		48C1AD762603CEFC003F48F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48C1AD792603CEFC003F48F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		48C1AD7B2603CEFC003F48F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +80,45 @@
 		48C1AD8B2603CEFC003F48F1 /* FirebaseAuthFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseAuthFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C1AD8F2603CEFC003F48F1 /* FirebaseAuthFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthFlowUITests.swift; sourceTree = "<group>"; };
 		48C1AD912603CEFC003F48F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C1ADC22603D033003F48F1 /* OnboardingStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStart.swift; sourceTree = "<group>"; };
+		48C1ADC72603D0E0003F48F1 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		48C1ADCD2603D119003F48F1 /* FirebaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworking.swift; sourceTree = "<group>"; };
+		48C1ADD22603D15D003F48F1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		48C1ADD72603D18D003F48F1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		48C1ADDC2603D41E003F48F1 /* DefaultsObservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsObservation.swift; sourceTree = "<group>"; };
+		48C1ADE12603D4C5003F48F1 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		48C1ADE72603D53C003F48F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		48C1ADEF2603D638003F48F1 /* OnboardingPhoneEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPhoneEntry.swift; sourceTree = "<group>"; };
+		48C1ADF42603D682003F48F1 /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
+		48C1ADFA2603D6F2003F48F1 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		48C1ADFF2603D70B003F48F1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		48C1AE172603D829003F48F1 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		48C1AE182603D829003F48F1 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		48C1AE192603D82A003F48F1 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		48C1AE1A2603D82A003F48F1 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		48C1AE1B2603D82A003F48F1 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		48C1AE1C2603D82A003F48F1 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		48C1AE1D2603D82A003F48F1 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		48C1AE1E2603D82A003F48F1 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		48C1AE1F2603D82A003F48F1 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		48C1AE202603D82A003F48F1 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		48C1AE3A2603D890003F48F1 /* OnboardingEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingEntryViewModel.swift; sourceTree = "<group>"; };
+		48C1AE3F2603D922003F48F1 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		48C1AE442603D95F003F48F1 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		48C1AE492603DA38003F48F1 /* PhoneNumEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumEntryView.swift; sourceTree = "<group>"; };
+		48C1AE4E2603DAD6003F48F1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		48C1AE532603DBA0003F48F1 /* OnboardingCodeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCodeEntry.swift; sourceTree = "<group>"; };
+		48C1AE582603DBE7003F48F1 /* ProgressStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStepper.swift; sourceTree = "<group>"; };
+		48C1AE5D2603DC97003F48F1 /* CodeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEntry.swift; sourceTree = "<group>"; };
+		48C1AE622603DD1B003F48F1 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		48C1AE672603DDF7003F48F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		58E22FA648FAE2EB1050D9E0 /* Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8EEA6A5DF88A9463BCBC31C9 /* Pods_FirebaseAuthFlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseAuthFlowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F026BE1943F47B448C1C42 /* Pods-FirebaseAuthFlowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthFlowTests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthFlowTests/Pods-FirebaseAuthFlowTests.release.xcconfig"; sourceTree = "<group>"; };
+		C38D1017D8F3B2F254F0640B /* Pods-FirebaseAuthFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthFlow.release.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthFlow/Pods-FirebaseAuthFlow.release.xcconfig"; sourceTree = "<group>"; };
+		CE91CF8F349EE9FAFD9652A5 /* Pods-FirebaseAuthFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthFlow.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthFlow/Pods-FirebaseAuthFlow.debug.xcconfig"; sourceTree = "<group>"; };
+		D35A4A8CCD66ECDEF96BF628 /* Pods_FirebaseAuthFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseAuthFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA21E11A0B726FD6FBCD72D3 /* Pods_FirebaseAuthFlow_FirebaseAuthFlowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseAuthFlow_FirebaseAuthFlowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798F1CB3FE98BEE5A2FA809F /* Pods_FirebaseAuthFlow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7608CE6E7EADE51DBFBFF4 /* Pods_FirebaseAuthFlowTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E91B27094A9D00AB0FAC2D8 /* Pods_FirebaseAuthFlow_FirebaseAuthFlowUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +156,8 @@
 				48C1AD832603CEFC003F48F1 /* FirebaseAuthFlowTests */,
 				48C1AD8E2603CEFC003F48F1 /* FirebaseAuthFlowUITests */,
 				48C1AD702603CEFB003F48F1 /* Products */,
+				F696FA9FFCDD04A11197C90D /* Pods */,
+				5D50E8CED49B8ED11FC87960 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,10 +174,14 @@
 		48C1AD712603CEFB003F48F1 /* FirebaseAuthFlow */ = {
 			isa = PBXGroup;
 			children = (
-				48C1AD722603CEFB003F48F1 /* FirebaseAuthFlowApp.swift */,
-				48C1AD742603CEFB003F48F1 /* ContentView.swift */,
-				48C1AD762603CEFC003F48F1 /* Assets.xcassets */,
+				48C1ADF92603D6D5003F48F1 /* Extension */,
+				48C1ADCC2603D0FE003F48F1 /* Networking */,
+				48C1ADBE2603D015003F48F1 /* ViewModel */,
+				48C1ADBA2603D002003F48F1 /* Model */,
+				48C1ADB62603CFEF003F48F1 /* View */,
+				48C1ADE62603D519003F48F1 /* Resources */,
 				48C1AD7B2603CEFC003F48F1 /* Info.plist */,
+				48C1AE672603DDF7003F48F1 /* GoogleService-Info.plist */,
 				48C1AD782603CEFC003F48F1 /* Preview Content */,
 			);
 			path = FirebaseAuthFlow;
@@ -130,6 +213,112 @@
 			path = FirebaseAuthFlowUITests;
 			sourceTree = "<group>";
 		};
+		48C1ADB62603CFEF003F48F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48C1AD722603CEFB003F48F1 /* FirebaseAuthFlowApp.swift */,
+				48C1AE492603DA38003F48F1 /* PhoneNumEntryView.swift */,
+				48C1AE3F2603D922003F48F1 /* CustomBackButton.swift */,
+				48C1ADC22603D033003F48F1 /* OnboardingStart.swift */,
+				48C1ADEF2603D638003F48F1 /* OnboardingPhoneEntry.swift */,
+				48C1AE532603DBA0003F48F1 /* OnboardingCodeEntry.swift */,
+				48C1ADF42603D682003F48F1 /* BigButton.swift */,
+				48C1AE582603DBE7003F48F1 /* ProgressStepper.swift */,
+				48C1AE5D2603DC97003F48F1 /* CodeEntry.swift */,
+				48C1AE622603DD1B003F48F1 /* MainPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48C1ADBA2603D002003F48F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48C1ADD22603D15D003F48F1 /* Constants.swift */,
+				48C1ADD72603D18D003F48F1 /* User.swift */,
+				48C1ADDC2603D41E003F48F1 /* DefaultsObservation.swift */,
+				48C1ADE12603D4C5003F48F1 /* Errors.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48C1ADBE2603D015003F48F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				48C1ADC72603D0E0003F48F1 /* ViewRouter.swift */,
+				48C1AE3A2603D890003F48F1 /* OnboardingEntryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48C1ADCC2603D0FE003F48F1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				48C1ADCD2603D119003F48F1 /* FirebaseNetworking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		48C1ADE62603D519003F48F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				48C1AE0C2603D7D8003F48F1 /* Font */,
+				48C1AD762603CEFC003F48F1 /* Assets.xcassets */,
+				48C1ADE72603D53C003F48F1 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		48C1ADF92603D6D5003F48F1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				48C1ADFA2603D6F2003F48F1 /* FontExtension.swift */,
+				48C1AE442603D95F003F48F1 /* ImageExtension.swift */,
+				48C1ADFF2603D70B003F48F1 /* ColorExtension.swift */,
+				48C1AE4E2603DAD6003F48F1 /* StringExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		48C1AE0C2603D7D8003F48F1 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				48C1AE182603D829003F48F1 /* Rubik-Black.ttf */,
+				48C1AE1D2603D82A003F48F1 /* Rubik-BlackItalic.ttf */,
+				48C1AE1E2603D82A003F48F1 /* Rubik-Bold.ttf */,
+				48C1AE1B2603D82A003F48F1 /* Rubik-BoldItalic.ttf */,
+				48C1AE1A2603D82A003F48F1 /* Rubik-Italic.ttf */,
+				48C1AE1C2603D82A003F48F1 /* Rubik-Light.ttf */,
+				48C1AE192603D82A003F48F1 /* Rubik-LightItalic.ttf */,
+				48C1AE1F2603D82A003F48F1 /* Rubik-Medium.ttf */,
+				48C1AE202603D82A003F48F1 /* Rubik-MediumItalic.ttf */,
+				48C1AE172603D829003F48F1 /* Rubik-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		5D50E8CED49B8ED11FC87960 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35A4A8CCD66ECDEF96BF628 /* Pods_FirebaseAuthFlow.framework */,
+				DA21E11A0B726FD6FBCD72D3 /* Pods_FirebaseAuthFlow_FirebaseAuthFlowUITests.framework */,
+				8EEA6A5DF88A9463BCBC31C9 /* Pods_FirebaseAuthFlowTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F696FA9FFCDD04A11197C90D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE91CF8F349EE9FAFD9652A5 /* Pods-FirebaseAuthFlow.debug.xcconfig */,
+				C38D1017D8F3B2F254F0640B /* Pods-FirebaseAuthFlow.release.xcconfig */,
+				58E22FA648FAE2EB1050D9E0 /* Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.debug.xcconfig */,
+				0C9E2D1191B1F08F30EBF6D3 /* Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.release.xcconfig */,
+				074FF3363C51213C4E0DF91A /* Pods-FirebaseAuthFlowTests.debug.xcconfig */,
+				B3F026BE1943F47B448C1C42 /* Pods-FirebaseAuthFlowTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +326,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48C1AD942603CEFC003F48F1 /* Build configuration list for PBXNativeTarget "FirebaseAuthFlow" */;
 			buildPhases = (
+				593020C76663EE4A575D7DBE /* [CP] Check Pods Manifest.lock */,
 				48C1AD6B2603CEFB003F48F1 /* Sources */,
 				48C1AD6C2603CEFB003F48F1 /* Frameworks */,
 				48C1AD6D2603CEFB003F48F1 /* Resources */,
+				0F7AD7A032D6EBBD83AE18DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +345,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48C1AD972603CEFC003F48F1 /* Build configuration list for PBXNativeTarget "FirebaseAuthFlowTests" */;
 			buildPhases = (
+				434BFE431256C351248D6638 /* [CP] Check Pods Manifest.lock */,
 				48C1AD7C2603CEFC003F48F1 /* Sources */,
 				48C1AD7D2603CEFC003F48F1 /* Frameworks */,
 				48C1AD7E2603CEFC003F48F1 /* Resources */,
@@ -172,9 +364,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48C1AD9A2603CEFC003F48F1 /* Build configuration list for PBXNativeTarget "FirebaseAuthFlowUITests" */;
 			buildPhases = (
+				0061A6030C267EA0A724961B /* [CP] Check Pods Manifest.lock */,
 				48C1AD872603CEFC003F48F1 /* Sources */,
 				48C1AD882603CEFC003F48F1 /* Frameworks */,
 				48C1AD892603CEFC003F48F1 /* Resources */,
+				C38B920DF4EAF2BC9213199D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,8 +427,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C1AE212603D833003F48F1 /* Rubik-Black.ttf in Resources */,
+				48C1AE322603D844003F48F1 /* Rubik-LightItalic.ttf in Resources */,
+				48C1AE2D2603D840003F48F1 /* Rubik-BoldItalic.ttf in Resources */,
 				48C1AD7A2603CEFC003F48F1 /* Preview Assets.xcassets in Resources */,
+				48C1AE332603D844003F48F1 /* Rubik-Light.ttf in Resources */,
+				48C1AE252603D83A003F48F1 /* Rubik-BlackItalic.ttf in Resources */,
+				48C1AE352603D844003F48F1 /* Rubik-Regular.ttf in Resources */,
+				48C1AE682603DDF7003F48F1 /* GoogleService-Info.plist in Resources */,
+				48C1AE362603D844003F48F1 /* Rubik-MediumItalic.ttf in Resources */,
+				48C1AE312603D844003F48F1 /* Rubik-Italic.ttf in Resources */,
 				48C1AD772603CEFC003F48F1 /* Assets.xcassets in Resources */,
+				48C1AE292603D83D003F48F1 /* Rubik-Bold.ttf in Resources */,
+				48C1AE342603D844003F48F1 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +459,136 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0061A6030C267EA0A724961B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F7AD7A032D6EBBD83AE18DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseAuthFlow/Pods-FirebaseAuthFlow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseAuthFlow/Pods-FirebaseAuthFlow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseAuthFlow/Pods-FirebaseAuthFlow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		434BFE431256C351248D6638 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirebaseAuthFlowTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		593020C76663EE4A575D7DBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirebaseAuthFlow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C38B920DF4EAF2BC9213199D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		48C1AD6B2603CEFB003F48F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48C1AD752603CEFB003F48F1 /* ContentView.swift in Sources */,
+				48C1ADF02603D638003F48F1 /* OnboardingPhoneEntry.swift in Sources */,
+				48C1AE542603DBA0003F48F1 /* OnboardingCodeEntry.swift in Sources */,
+				48C1ADDD2603D41E003F48F1 /* DefaultsObservation.swift in Sources */,
+				48C1AE632603DD1B003F48F1 /* MainPage.swift in Sources */,
+				48C1ADD32603D15D003F48F1 /* Constants.swift in Sources */,
+				48C1ADCE2603D119003F48F1 /* FirebaseNetworking.swift in Sources */,
+				48C1ADE82603D53C003F48F1 /* AppDelegate.swift in Sources */,
+				48C1ADF52603D682003F48F1 /* BigButton.swift in Sources */,
+				48C1AE402603D922003F48F1 /* CustomBackButton.swift in Sources */,
+				48C1ADFB2603D6F2003F48F1 /* FontExtension.swift in Sources */,
+				48C1ADD82603D18D003F48F1 /* User.swift in Sources */,
+				48C1ADE22603D4C5003F48F1 /* Errors.swift in Sources */,
+				48C1AE5E2603DC97003F48F1 /* CodeEntry.swift in Sources */,
+				48C1ADC82603D0E0003F48F1 /* ViewRouter.swift in Sources */,
+				48C1AE4A2603DA38003F48F1 /* PhoneNumEntryView.swift in Sources */,
+				48C1AE3B2603D890003F48F1 /* OnboardingEntryViewModel.swift in Sources */,
 				48C1AD732603CEFB003F48F1 /* FirebaseAuthFlowApp.swift in Sources */,
+				48C1AE4F2603DAD6003F48F1 /* StringExtension.swift in Sources */,
+				48C1AE592603DBE7003F48F1 /* ProgressStepper.swift in Sources */,
+				48C1ADC32603D033003F48F1 /* OnboardingStart.swift in Sources */,
+				48C1AE002603D70B003F48F1 /* ColorExtension.swift in Sources */,
+				48C1AE452603D95F003F48F1 /* ImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +742,7 @@
 		};
 		48C1AD952603CEFC003F48F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE91CF8F349EE9FAFD9652A5 /* Pods-FirebaseAuthFlow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -436,6 +765,7 @@
 		};
 		48C1AD962603CEFC003F48F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C38D1017D8F3B2F254F0640B /* Pods-FirebaseAuthFlow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,6 +788,7 @@
 		};
 		48C1AD982603CEFC003F48F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 074FF3363C51213C4E0DF91A /* Pods-FirebaseAuthFlowTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +811,7 @@
 		};
 		48C1AD992603CEFC003F48F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F026BE1943F47B448C1C42 /* Pods-FirebaseAuthFlowTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +834,7 @@
 		};
 		48C1AD9B2603CEFC003F48F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58E22FA648FAE2EB1050D9E0 /* Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +855,7 @@
 		};
 		48C1AD9C2603CEFC003F48F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C9E2D1191B1F08F30EBF6D3 /* Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
