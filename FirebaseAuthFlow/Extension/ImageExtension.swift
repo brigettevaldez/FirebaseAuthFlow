@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Image {
-    static let appIcon = Image("porridgeIcon")
+    static let appIcon = Image("myAppIcon")
     static let backArrow = Image("backArrow")
     static let arrowIcon = Image("arrow")
     static let warning = Image("warning")

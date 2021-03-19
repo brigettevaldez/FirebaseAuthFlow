@@ -35,9 +35,7 @@ extension Font {
     static let medTwentyEight = Font.custom("Rubik-Medium", size: 28)
     
     static let boldThirtyTwo = Font.custom("Rubik-Bold", size: 32)
-    
-    
-    
+ 
     static let medThirtySix = Font.custom("Rubik-Medium", size: 36)
     static let medFifty = Font.custom("Rubik-Medium", size: 50)
     

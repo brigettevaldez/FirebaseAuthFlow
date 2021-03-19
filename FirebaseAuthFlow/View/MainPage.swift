@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct MainPage: View {
+    
+    
     var body: some View {
+        VStack {
         Text("Main Page!")
+            Spacer()
+            Button(action: {
+                UserDefaults.standard.removeObject(forKey: Constants.UIDKey)
+            }, label: {
+                BigButton(titleText: "Sign Out")
+            })
+        }.padding(.all, 50)
     }
 }
 

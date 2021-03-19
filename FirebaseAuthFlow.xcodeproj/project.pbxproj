@@ -46,6 +46,7 @@
 		48C1AE5E2603DC97003F48F1 /* CodeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AE5D2603DC97003F48F1 /* CodeEntry.swift */; };
 		48C1AE632603DD1B003F48F1 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AE622603DD1B003F48F1 /* MainPage.swift */; };
 		48C1AE682603DDF7003F48F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE672603DDF7003F48F1 /* GoogleService-Info.plist */; };
+		48C1AE732603EC82003F48F1 /* PhoneCountryCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AE722603EC82003F48F1 /* PhoneCountryCodes.json */; };
 		798F1CB3FE98BEE5A2FA809F /* Pods_FirebaseAuthFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35A4A8CCD66ECDEF96BF628 /* Pods_FirebaseAuthFlow.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +113,7 @@
 		48C1AE5D2603DC97003F48F1 /* CodeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEntry.swift; sourceTree = "<group>"; };
 		48C1AE622603DD1B003F48F1 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		48C1AE672603DDF7003F48F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		48C1AE722603EC82003F48F1 /* PhoneCountryCodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PhoneCountryCodes.json; sourceTree = "<group>"; };
 		58E22FA648FAE2EB1050D9E0 /* Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8EEA6A5DF88A9463BCBC31C9 /* Pods_FirebaseAuthFlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseAuthFlowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F026BE1943F47B448C1C42 /* Pods-FirebaseAuthFlowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthFlowTests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthFlowTests/Pods-FirebaseAuthFlowTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -217,9 +219,9 @@
 			isa = PBXGroup;
 			children = (
 				48C1AD722603CEFB003F48F1 /* FirebaseAuthFlowApp.swift */,
+				48C1ADC22603D033003F48F1 /* OnboardingStart.swift */,
 				48C1AE492603DA38003F48F1 /* PhoneNumEntryView.swift */,
 				48C1AE3F2603D922003F48F1 /* CustomBackButton.swift */,
-				48C1ADC22603D033003F48F1 /* OnboardingStart.swift */,
 				48C1ADEF2603D638003F48F1 /* OnboardingPhoneEntry.swift */,
 				48C1AE532603DBA0003F48F1 /* OnboardingCodeEntry.swift */,
 				48C1ADF42603D682003F48F1 /* BigButton.swift */,
@@ -264,6 +266,7 @@
 				48C1AE0C2603D7D8003F48F1 /* Font */,
 				48C1AD762603CEFC003F48F1 /* Assets.xcassets */,
 				48C1ADE72603D53C003F48F1 /* AppDelegate.swift */,
+				48C1AE722603EC82003F48F1 /* PhoneCountryCodes.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C1AE732603EC82003F48F1 /* PhoneCountryCodes.json in Resources */,
 				48C1AE212603D833003F48F1 /* Rubik-Black.ttf in Resources */,
 				48C1AE322603D844003F48F1 /* Rubik-LightItalic.ttf in Resources */,
 				48C1AE2D2603D840003F48F1 /* Rubik-BoldItalic.ttf in Resources */,

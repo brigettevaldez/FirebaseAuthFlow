@@ -35,11 +35,6 @@ struct OnboardingCodeEntry: View {
                     .padding(.bottom, 50)
                     .frame(width: 250)
                 })
-                NavigationLink(
-                    destination: SetupGenderPicker(),
-                    isActive: $viewModel.finished,
-                    label: { })
-                
                 }.padding([.leading, .trailing], 50)
             .navigationBarBackButtonHidden(true)
            .navigationBarItems(leading: CustomBackButton(buttonTap: backBtnTapped))

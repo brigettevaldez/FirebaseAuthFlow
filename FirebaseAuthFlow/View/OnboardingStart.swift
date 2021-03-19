@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingStart: View {
     
+    @State var nextPage: Bool = false
     let appName = "App Name Here"
     
     var body: some View {
@@ -26,11 +27,12 @@ struct OnboardingStart: View {
             Spacer()
             NavigationLink(
                 destination: OnboardingPhoneEntry(),
+                isActive: $nextPage,
                 label: {
                     BigButton(titleText: "Get Started")
                         .frame(width: 250)
-                      
-                }).buttonStyle(PlainButtonStyle())
+                })
+           
                 
                 .padding(.bottom, 50)
         }

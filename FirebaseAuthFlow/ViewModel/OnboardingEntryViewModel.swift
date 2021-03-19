@@ -101,16 +101,14 @@ class CountryCode: Hashable, Codable {
     var name: String
     var dial_code: String
     var code: String
-    //var imgData: String?
     
     init(name: String, dial_code: String, code: String) {
         self.name = name
         self.dial_code = dial_code
         self.code = code
-        //self.loadImg()
     }
     
-    func flag(/*country:String*/) -> String {
+    func flag() -> String {
         let base : UInt32 = 127397
         var s = ""
         for v in self.code.unicodeScalars {

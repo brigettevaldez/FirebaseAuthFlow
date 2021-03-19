@@ -7,10 +7,11 @@
 
 import Foundation
 import SwiftUI
-import Combine
+import Combine 
 import FirebaseFirestore
 
 
+/// The ViewRouter is created at the same time as the App. It watches the user credentials in user defaults and controls the current scene of the app
 class ViewRouter: ObservableObject {
     
     var userDocListener: ListenerRegistration?
@@ -27,8 +28,7 @@ class ViewRouter: ObservableObject {
    
     
     init() {
-       // UserDefaults.standard.removeObject(forKey: Constants.UIDKey)
-        if let _ =  UserDefaults.standard.string(forKey: Constants.UIDKey) {
+        if let _ =  UserDefaults.standard.string(forKey: Constants.UIDKey) { //if there is a uid stored in user defaults we do not need to sign in and can simply show the main page
             currentView = .main
         } else {
             print("No uid stored. Please sign in")
@@ -37,7 +37,16 @@ class ViewRouter: ObservableObject {
         $currentView.sink { (newActiveView) in
             print("Current view updated to -> \(self.currentView)")
         }.store(in: &subscribers)
-        startUIDObserver()
+        
+        /// Start an observer on userUID to alert this class when the user default is changed
+        print("setting uid observer")
+        uidObserver = $userUID.observe { old, new in
+            if  self.validateUID(new) {
+                self.currentView = .main
+            } else {
+                self.currentView = .onboarding
+            }
+        }
     }
     
     deinit {
@@ -45,7 +54,7 @@ class ViewRouter: ObservableObject {
         subscribers = []
     }
     
-    func startUserDocListener(uid: String?) -> Bool {
+    /* func startUserDocListener(uid: String?) -> Bool {
         guard let uid = uid,
               uid.count > 0 else {
             print("Failed to start uid listener. Valid uid not found")
@@ -54,32 +63,34 @@ class ViewRouter: ObservableObject {
         self.setUidListener(uid: uid)
         return true
     }
+    */
     
+
     
-    private func startUIDObserver() {
-        print("setting uid observer")
-        uidObserver = $userUID.observe { old, new in
-            if  self.startUserDocListener(uid: new) {
-                self.currentView = .main
-            }
-            /*guard let uid = new,
-                  uid.count > 0 else {
-                print("Failed to start uid listener. Valid uid not found")
-                return
-            }
-            //self.setUidListener(uid: uid)
-            self.currentView = .main*/
+    func validateUID(_ uid: String?) -> Bool {
+        guard let uid = uid,
+              uid.count > 0 else {
+            print("Failed to start uid listener. Valid uid not found")
+            return false
         }
+        return true
     }
     
-    private func setUidListener(uid: String) {
-        print("Adding user doc listener")
-        userDocListener = FirebaseNetworking().db.collection("users").document(uid).addSnapshotListener({  (snapshot, error) in
+    
+    func setUidDocListener(uid: String?) {
+        guard let _uid = uid,
+              validateUID(uid) else {
+            self.currentView = .onboarding
+            return
+        }
+        
+        print("Attempting to add user doc listener")
+        userDocListener = FirebaseNetworking().db.collection("users").document(_uid).addSnapshotListener({  (snapshot, error) in
             print("User doc snapshot returned")
             if let error = error { print("error with snapshot listener: \(error.localizedDescription)") }
             if let snapshot = snapshot {
                if let data = snapshot.data() {
-                let usr = User(uid: uid, data: data)
+                let usr = User(uid: _uid, data: data)
                 print("change reported for user doc.\n \(usr.printDescription)")
                 self.user = usr
                }

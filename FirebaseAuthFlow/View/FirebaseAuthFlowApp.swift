@@ -16,21 +16,28 @@ struct FirebaseAuthFlowApp: App {
     
     init() {
         self.viewRouter = ViewRouter()
+
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = true
+        
     }
     
     
     var body: some Scene {
         WindowGroup {
-            switch viewRouter.currentView {
-            case .onboarding:
-                OnboardingStart()
-            case .accountSetup:
-                OnboardingStart()
-            case .main:
-                MainPage()
-                    .onAppear() {
-                        let _ = viewRouter.startUserDocListener(uid: UserDefaults.standard.string(forKey: Constants.UIDKey))
-                    }
+            NavigationView {
+                switch viewRouter.currentView {
+                case .onboarding:
+                    OnboardingStart()
+                case .accountSetup:
+                    OnboardingStart()
+                case .main:
+                    MainPage()
+                        .onAppear() {
+                            let _ = viewRouter.setUidDocListener(uid: UserDefaults.standard.string(forKey: Constants.UIDKey))
+                        }
+                }
             }
         }
     }

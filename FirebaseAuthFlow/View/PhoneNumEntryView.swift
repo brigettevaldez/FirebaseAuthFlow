@@ -15,9 +15,6 @@ struct PhoneNumEntryView: View {
     var columns: [GridItem] =
         Array(repeating: .init(.flexible()), count: 1)
     
-    /*init() {
-        self.viewModel = PhoneNumEntryViewModel()
-    }*/
     
     var body: some View {
         ZStack(alignment: .topLeading) {
