@@ -28,6 +28,6 @@ struct ProgressStepper: View {
 
 struct ProgressStepper_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressStepper(range: 0...5, fill: 3)
+        ProgressStepper(range: 0...5, fill: 1)
     }
 }

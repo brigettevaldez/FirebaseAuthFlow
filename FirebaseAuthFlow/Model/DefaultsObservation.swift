@@ -38,6 +38,7 @@ struct Key: RawRepresentable {
     let rawValue: String
 }
 
+
 extension Key: ExpressibleByStringLiteral {
     static let UIDKey: Key = "uid"
     
@@ -47,6 +48,7 @@ extension Key: ExpressibleByStringLiteral {
 }
 
 
+///Wrapper to save and load values from UserDefaults
 @propertyWrapper
 struct UserDefault<T: PropertyListValue> {
     let key: Key

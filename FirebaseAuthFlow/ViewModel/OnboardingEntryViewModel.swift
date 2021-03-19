@@ -21,6 +21,7 @@ class OnboardingEntryViewModel: ObservableObject {
     @Published var code: String = ""
     
     init() {
+        ///load in country code list from saved json file and save to the activeCountryCode array
         countryCodes = []
         if let path = Bundle.main.url(forResource: "PhoneCountryCodes", withExtension: "json") {
             do {
@@ -35,6 +36,7 @@ class OnboardingEntryViewModel: ObservableObject {
         self.activeCountryCodes = countryCodes
     }
     
+    ///set the selectedCode to the user selected code
     func selectCountry(_ country: CountryCode) {
         selectedCode = country.dial_code
     }
@@ -43,6 +45,8 @@ class OnboardingEntryViewModel: ObservableObject {
         selectedCode = nil
     }
     
+    
+    /// concatenate the chosen country code with the user entered phone number and send it to firebase. Firebase will then send a six digit text code to the entered phone number
     func sendTextCode() {
         guard let code = selectedCode else {
             visibleError = OnboardingError.noCountryCodeChosen
@@ -54,6 +58,8 @@ class OnboardingEntryViewModel: ObservableObject {
         networking.sendCodeTextTo(phoneNumStr, errorCompletion: errorCompletion(_:), successCompletion: successCompletion(_:))
     }
     
+    
+    /// concatenate the chosen country code with the user entered phone number and send it to firebase. Firebase will then send a six digit text code to the entered phone number
     func resendCode() {
         guard let code = selectedCode else {
             visibleError = OnboardingError.noCountryCodeChosen
@@ -65,18 +71,28 @@ class OnboardingEntryViewModel: ObservableObject {
         networking.sendCodeTextTo(phoneNumStr, errorCompletion: errorCompletion(_:)) { (success) in }
     }
     
+    
+    /// send the six digit code to firebase to login the user and return the uid
     func verifyCode() {
         let networking = FirebaseNetworking()
         networking.verifyCode(code, errorCompletion: errorCompletion(_:)) { (success) in
-            print("Successfully verified and signed in user")
+            print("SuccessCompletion returned from FirebaseNetworking")
+            if success { print("FirebaseNetworking.verifyCode reported true through successCompletion") }
+            else { print("FirebaseNetworking.verifyCode reported false through successCompletion")}
         }
     }
    
+    
+    /// If an error is returned it is set in visible error where it will be shown onscreen
+    /// - Parameter error: the returned error
     func errorCompletion(_ error: Error?) {
         visibleError = error
         print(error?.localizedDescription ?? "Whoops. We run into an error")
     }
     
+    
+    /// completion block function to signal the six digit code was successfully sent
+    /// - Parameter success: bool for if the code was successfully sent
     func successCompletion(_ success: Bool) -> Void {
         visibleError = nil
         nextPage = true
