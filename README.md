@@ -1,5 +1,11 @@
+
+
+
+
 # FirebaseAuthFlow
 Simple SwiftUI app that implements the Firebase Auth flow for phone number login
+
+https://user-images.githubusercontent.com/35542673/111826896-384e9980-88b7-11eb-8030-0ee6bca143b0.mov
 
 To run code:
 1. Fork/download repo
