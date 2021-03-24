@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0E91B27094A9D00AB0FAC2D8 /* Pods_FirebaseAuthFlow_FirebaseAuthFlowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA21E11A0B726FD6FBCD72D3 /* Pods_FirebaseAuthFlow_FirebaseAuthFlowUITests.framework */; };
 		3C7608CE6E7EADE51DBFBFF4 /* Pods_FirebaseAuthFlowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEA6A5DF88A9463BCBC31C9 /* Pods_FirebaseAuthFlowTests.framework */; };
+		48B1BAC0260B8EE7003A573A /* AlternativeSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1BABF260B8EE7003A573A /* AlternativeSignInButton.swift */; };
+		48B1BACA260BAFB4003A573A /* SignInWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1BAC9260BAFB4003A573A /* SignInWithAppleViewModel.swift */; };
+		48B1BACF260BB3E4003A573A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1BACE260BB3E4003A573A /* UserData.swift */; };
+		48B1BAD4260BB421003A573A /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1BAD3260BB421003A573A /* Keychain.swift */; };
+		48B1BAD9260BB531003A573A /* EnvironmentWindowKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1BAD8260BB531003A573A /* EnvironmentWindowKey.swift */; };
 		48C1AD732603CEFB003F48F1 /* FirebaseAuthFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C1AD722603CEFB003F48F1 /* FirebaseAuthFlowApp.swift */; };
 		48C1AD772603CEFC003F48F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AD762603CEFC003F48F1 /* Assets.xcassets */; };
 		48C1AD7A2603CEFC003F48F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C1AD792603CEFC003F48F1 /* Preview Assets.xcassets */; };
@@ -70,6 +75,12 @@
 /* Begin PBXFileReference section */
 		074FF3363C51213C4E0DF91A /* Pods-FirebaseAuthFlowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthFlowTests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthFlowTests/Pods-FirebaseAuthFlowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0C9E2D1191B1F08F30EBF6D3 /* Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests/Pods-FirebaseAuthFlow-FirebaseAuthFlowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4886C089260BB7CA00221AB2 /* FirebaseAuthFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseAuthFlow.entitlements; sourceTree = "<group>"; };
+		48B1BABF260B8EE7003A573A /* AlternativeSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternativeSignInButton.swift; sourceTree = "<group>"; };
+		48B1BAC9260BAFB4003A573A /* SignInWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleViewModel.swift; sourceTree = "<group>"; };
+		48B1BACE260BB3E4003A573A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		48B1BAD3260BB421003A573A /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		48B1BAD8260BB531003A573A /* EnvironmentWindowKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentWindowKey.swift; sourceTree = "<group>"; };
 		48C1AD6F2603CEFB003F48F1 /* FirebaseAuthFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C1AD722603CEFB003F48F1 /* FirebaseAuthFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthFlowApp.swift; sourceTree = "<group>"; };
 		48C1AD762603CEFC003F48F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -176,6 +187,7 @@
 		48C1AD712603CEFB003F48F1 /* FirebaseAuthFlow */ = {
 			isa = PBXGroup;
 			children = (
+				4886C089260BB7CA00221AB2 /* FirebaseAuthFlow.entitlements */,
 				48C1ADF92603D6D5003F48F1 /* Extension */,
 				48C1ADCC2603D0FE003F48F1 /* Networking */,
 				48C1ADBE2603D015003F48F1 /* ViewModel */,
@@ -220,6 +232,7 @@
 			children = (
 				48C1AD722603CEFB003F48F1 /* FirebaseAuthFlowApp.swift */,
 				48C1ADC22603D033003F48F1 /* OnboardingStart.swift */,
+				48B1BABF260B8EE7003A573A /* AlternativeSignInButton.swift */,
 				48C1AE492603DA38003F48F1 /* PhoneNumEntryView.swift */,
 				48C1AE3F2603D922003F48F1 /* CustomBackButton.swift */,
 				48C1ADEF2603D638003F48F1 /* OnboardingPhoneEntry.swift */,
@@ -237,8 +250,11 @@
 			children = (
 				48C1ADD22603D15D003F48F1 /* Constants.swift */,
 				48C1ADD72603D18D003F48F1 /* User.swift */,
+				48B1BACE260BB3E4003A573A /* UserData.swift */,
 				48C1ADDC2603D41E003F48F1 /* DefaultsObservation.swift */,
+				48B1BAD3260BB421003A573A /* Keychain.swift */,
 				48C1ADE12603D4C5003F48F1 /* Errors.swift */,
+				48B1BAD8260BB531003A573A /* EnvironmentWindowKey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,6 +262,7 @@
 		48C1ADBE2603D015003F48F1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				48B1BAC9260BAFB4003A573A /* SignInWithAppleViewModel.swift */,
 				48C1ADC72603D0E0003F48F1 /* ViewRouter.swift */,
 				48C1AE3A2603D890003F48F1 /* OnboardingEntryViewModel.swift */,
 			);
@@ -571,21 +588,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48B1BACF260BB3E4003A573A /* UserData.swift in Sources */,
 				48C1ADF02603D638003F48F1 /* OnboardingPhoneEntry.swift in Sources */,
 				48C1AE542603DBA0003F48F1 /* OnboardingCodeEntry.swift in Sources */,
 				48C1ADDD2603D41E003F48F1 /* DefaultsObservation.swift in Sources */,
+				48B1BACA260BAFB4003A573A /* SignInWithAppleViewModel.swift in Sources */,
 				48C1AE632603DD1B003F48F1 /* MainPage.swift in Sources */,
 				48C1ADD32603D15D003F48F1 /* Constants.swift in Sources */,
 				48C1ADCE2603D119003F48F1 /* FirebaseNetworking.swift in Sources */,
 				48C1ADE82603D53C003F48F1 /* AppDelegate.swift in Sources */,
 				48C1ADF52603D682003F48F1 /* BigButton.swift in Sources */,
 				48C1AE402603D922003F48F1 /* CustomBackButton.swift in Sources */,
+				48B1BAD9260BB531003A573A /* EnvironmentWindowKey.swift in Sources */,
 				48C1ADFB2603D6F2003F48F1 /* FontExtension.swift in Sources */,
 				48C1ADD82603D18D003F48F1 /* User.swift in Sources */,
 				48C1ADE22603D4C5003F48F1 /* Errors.swift in Sources */,
+				48B1BAD4260BB421003A573A /* Keychain.swift in Sources */,
 				48C1AE5E2603DC97003F48F1 /* CodeEntry.swift in Sources */,
 				48C1ADC82603D0E0003F48F1 /* ViewRouter.swift in Sources */,
 				48C1AE4A2603DA38003F48F1 /* PhoneNumEntryView.swift in Sources */,
+				48B1BAC0260B8EE7003A573A /* AlternativeSignInButton.swift in Sources */,
 				48C1AE3B2603D890003F48F1 /* OnboardingEntryViewModel.swift in Sources */,
 				48C1AD732603CEFB003F48F1 /* FirebaseAuthFlowApp.swift in Sources */,
 				48C1AE4F2603DAD6003F48F1 /* StringExtension.swift in Sources */,
@@ -750,6 +772,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FirebaseAuthFlow/FirebaseAuthFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FirebaseAuthFlow/Preview Content\"";
 				DEVELOPMENT_TEAM = 8SJL86S8V5;
@@ -773,6 +796,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FirebaseAuthFlow/FirebaseAuthFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FirebaseAuthFlow/Preview Content\"";
 				DEVELOPMENT_TEAM = 8SJL86S8V5;

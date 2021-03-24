@@ -58,15 +58,40 @@ struct FirebaseNetworking {
                 errorCompletion(error)
             }
             if let result = authResult {//if the login attempt succeeds firebase will send back an authResult containing the uid for the user and their profile
-                let uid = result.user.uid
-                //save the new uid to user defaults
-                //this will get picked up by the ViewRouter and change the currentView from .onboarding to .main
-                UserDefaults.standard.set(uid, forKey: Constants.UIDKey)
-                print("User default uid set from FirebaseNetworking")
+                successfulSignIn(result)
                 successCompletion(true)
             }
         }
     }
+    
+    
+    func appleSignIn(idTokenString: String, nonce: String, errorCompletion: @escaping (Error) -> Void) {
+        // Initialize a Firebase credential.
+        let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
+        // Sign in with Firebase.
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+          if let error = error {
+            // Error. If error.code == .MissingOrInvalidNonce, make sure
+            // you're sending the SHA256-hashed nonce as a hex string with
+            // your request to Apple.
+            errorCompletion(error)
+            return
+          }
+            if let result = authResult {
+                successfulSignIn(result)
+            }
+        }
+    }
+    
+    func successfulSignIn(_ result: AuthDataResult) {
+        let uid = result.user.uid
+        //save the new uid to user defaults
+        //this will get picked up by the ViewRouter and change the currentView from .onboarding to .main
+        UserDefaults.standard.set(uid, forKey: Constants.UIDKey)
+        print("User default uid set from FirebaseNetworking")
+    }
+    
+    
     
     func updateUserData(uid: String, newData: [String:Any], errorCompletion: @escaping (Error?) -> Void) {
         db.collection("users").document(uid).setData(newData, merge: true, completion: errorCompletion)

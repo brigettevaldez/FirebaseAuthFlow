@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct OnboardingStart: View {
-    
+
+    let appName = "A Random Company"
+    let buttonSpacing: CGFloat = 10
+
+    @State var errorStr: String? = nil//"Error string testing. Error string testing. Error string testing"
     @State var nextPage: Bool = false
-    let appName = "App Name Here"
+    @Environment(\.window) var window: UIWindow?
+    @State var appleSignInDelegates: SignInWithAppleViewModel! = nil
     
     var body: some View {
         VStack {
@@ -25,19 +31,62 @@ struct OnboardingStart: View {
                 .font(.medTwentyEight)
                 .foregroundColor(.slateBlue)
             Spacer()
-            NavigationLink(
-                destination: OnboardingPhoneEntry(),
-                isActive: $nextPage,
-                label: {
-                    BigButton(titleText: "Get Started")
-                        .frame(width: 250)
-                })
-           
-                
-                .padding(.bottom, 50)
-        }
-    
+            VStack(spacing: buttonSpacing) {
+                NavigationLink(
+                    destination: OnboardingPhoneEntry(),
+                    isActive: $nextPage,
+                    label: {
+                        BigButton(titleText: "Use Phone Number")
+                    })
+                alternativeSignInMethods
+                    .padding(.bottom, 50)
+            }.frame(width: 250)
+        }.overlay(errorView)
     }
+    
+    var errorView: some View {
+        VStack {
+            if let err = errorStr {
+                HStack {
+                    Image.warning
+                        .resizable()
+                        .renderingMode(.template)
+                        .foregroundColor(.slateBlue)
+                        .frame(width: 18, height: 18)
+                    Text(err)
+                        .font(.regTwelve)
+                }
+            }
+            Spacer()
+        }
+    }
+    
+    var alternativeSignInMethods: some View {
+        HStack(spacing: buttonSpacing) {
+            AlternativeSignInButton(btnColor: Color("signInBtn"), imgColor: Color("bckColor"), imgName: "apple", btnTap: showAppleLogin)
+            AlternativeSignInButton(btnColor: Color("facebook"), imgColor: Color.white, imgName: "facebook", btnTap: showFacebookLogin)
+        }.frame(height: 40)
+    }
+    
+    private func showFacebookLogin() {
+        
+    }
+    
+    private func showAppleLogin() {
+      let request = ASAuthorizationAppleIDProvider().createRequest()
+      // specify type of end user data you need
+      request.requestedScopes = [.fullName, .email]
+        performSignIn(using: [request])
+    }
+    
+    private func performSignIn(using requests: [ASAuthorizationRequest]) {
+        appleSignInDelegates = SignInWithAppleViewModel(window: window, errorStr: $errorStr)
+      let controller = ASAuthorizationController(authorizationRequests: requests)
+      controller.delegate = appleSignInDelegates
+      controller.presentationContextProvider = appleSignInDelegates
+      controller.performRequests()
+    }
+
     
 }
 

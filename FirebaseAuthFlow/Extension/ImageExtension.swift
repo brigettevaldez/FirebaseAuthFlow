@@ -12,4 +12,5 @@ extension Image {
     static let backArrow = Image("backArrow")
     static let arrowIcon = Image("arrow")
     static let warning = Image("warning")
+    static let appleIcon = Image("apple")
 }

@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 extension Font {
-    
+    static let regTwelve = Font.custom("Rubik-Regular", size: 12)
     static let medTwelve = Font.custom("Rubik-Medium", size: 12)
     static let boldTwelve = Font.custom("Rubik-Bold", size: 12)
     
